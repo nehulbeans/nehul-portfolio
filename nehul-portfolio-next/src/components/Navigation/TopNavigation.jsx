@@ -1,34 +1,46 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Home, Briefcase, Folder, Wrench, File, Sun, Moon } from 'lucide-react';
+import { useState, useEffect } from "react";
+import {
+  Home,
+  Briefcase,
+  Folder,
+  Wrench,
+  BookOpen,
+  Trophy,
+  File,
+  Sun,
+  Moon,
+} from "lucide-react";
 
 export default function TopNavigation({ sectionRefs, scrollToSection }) {
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'light' || (savedTheme === null && !prefersDark)) {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    if (savedTheme === "light" || (savedTheme === null && !prefersDark)) {
       setDarkMode(false);
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     } else {
       setDarkMode(true);
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     }
   }, []);
 
   const toggleTheme = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    
+
     if (newDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   };
 
@@ -56,6 +68,18 @@ export default function TopNavigation({ sectionRefs, scrollToSection }) {
       href: "#skills",
       icon: <Wrench size={20} />,
       ref: sectionRefs.skills,
+    },
+    {
+      title: "Research",
+      href: "#research",
+      icon: <BookOpen size={20} />,
+      ref: sectionRefs.research,
+    },
+    {
+      title: "Awards",
+      href: "#awards",
+      icon: <Trophy size={20} />,
+      ref: sectionRefs.awards,
     },
     {
       title: "Resume",
