@@ -1,9 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-import { Linkedin, Github, Twitter, Instagram, Mail } from 'lucide-react';
-import { skillTags } from '../data/portfolioData';
-import ProfileCardBack from './ProfileCardBack';
+import { useState } from "react";
+import {
+  Linkedin,
+  Github,
+  Twitter,
+  Instagram,
+  Mail,
+  GraduationCap,
+} from "lucide-react";
+import { skillTags } from "../data/portfolioData";
+import ProfileCardBack from "./ProfileCardBack";
 
 export default function ProfileCard() {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -31,7 +36,8 @@ export default function ProfileCard() {
         <div
           className="absolute -inset-4 rounded-2xl opacity-75 blur-xl animate-pulse"
           style={{
-            background: "linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05))",
+            background:
+              "linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05))",
             transform: "translateZ(-10px)",
             transition: "all 500ms ease-in-out",
           }}
@@ -62,15 +68,13 @@ export default function ProfileCard() {
                   onContextMenu={(e) => e.preventDefault()}
                 />
               </div>
-              <h1 className="text-2xl font-bold text-black mb-0">
-                Nehul Jain
-              </h1>
+              <h1 className="text-2xl font-bold text-black mb-0">Nehul Jain</h1>
               <p className="text-zinc-600 font-medium mb-5">
                 i do stuff! still figuring out my life!
               </p>
               <div className="flex space-x-8">
                 <a
-                  href="https://www.linkedin.com/in/whonehuljain/"
+                  href="https://www.linkedin.com/in/nehuljainn/"
                   className="text-orange-500 hover:text-zinc-500"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -79,7 +83,7 @@ export default function ProfileCard() {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://github.com/whonehuljain"
+                  href="https://github.com/nehulbeans"
                   className="text-orange-500 hover:text-zinc-500"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -88,7 +92,7 @@ export default function ProfileCard() {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://x.com/whonehuljain"
+                  href="https://x.com/nehuljainn"
                   className="text-orange-500 hover:text-zinc-500"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -104,6 +108,15 @@ export default function ProfileCard() {
                   onClick={handleLinkClick}
                 >
                   <Instagram size={20} />
+                </a>
+                <a
+                  href="https://scholar.google.co.uk/citations?user=C2BuLKcAAAAJ&hl=en"
+                  className="text-orange-500 hover:text-zinc-500"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                >
+                  <GraduationCap size={22} />
                 </a>
                 <a
                   href="mailto:work.nehul@gmail.com"
