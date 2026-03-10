@@ -159,12 +159,6 @@ export const research = [
     publisher: "Springer",
     date: "Jan 2026",
   },
-  {
-    title: "Heart-Attack Analysis and Prediction Using Python",
-    role: "Co-authored research paper",
-    publisher: "Unpublished",
-    date: "",
-  },
 ];
 
 export const awards = [
@@ -173,18 +167,21 @@ export const awards = [
     description:
       "Led team to victory by building an AI-powered spoken language tool for immersive language learning and practicing.",
     date: "Feb 2024",
+    certificate: "/certificate/jugaad_hacks.jpg",
   },
   {
     title: "Runner-Up - Data-Vizard Hackathon",
     description:
       "Awarded 2nd place among 40+ teams for data-driven insights and exceptional visualization techniques.",
     date: "Mar 2024",
+    certificate: "/certificate/data_vizard.jpg",
   },
   {
     title: "Top 5%ile - Adobe GenSolve Hackathon",
     description:
       "Recognized for innovative problem-solving and successfully clearing Round 1.",
     date: "Aug 2024",
+    certificate: "/certificate/adobe_gensolve_r1.jpg",
   },
 ];
 
