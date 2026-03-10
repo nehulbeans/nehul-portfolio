@@ -4,19 +4,19 @@ export const experience = [
     link: "https://www.grafieks.com/",
     logo: "/company-logo/grafieks-logo.png",
     points: [
-      "developing end-to-end features for Grafieks' BI platform in GoLang, including calculated fields and pivot heatmaps",
-      "leading full-stack development from frontend to deployment, optimizing data processing and performance.",
+      "Developing end-to-end features for Grafieks' BI platform in GoLang, including cloud runtime environments and calculated fields.",
+      "Built and deployed Kubernetes-based infrastructure for container orchestration, including private registry setup with TLS authentication and multi-node cluster configuration.",
+      "Leading full-stack development from design to deployment, managing cloud infrastructure, data processing pipelines, and DevOps automation.",
     ],
     period: "Feb 2025 - Present",
   },
   {
-    company: "Upsurge Labs - Ml & Backend Development Intern",
+    company: "Upsurge Labs - ML & Backend Intern",
     link: "https://upsurge.io",
     logo: "/company-logo/upsurge-logo.png",
     points: [
-      "took cosmo (cosmoflow.ai) from an idea to internal beta, with autonomous web navigation and image element detection powered by open-source models.",
-      "built seamless data pipelines and llm workflows that plugged right into cosmo's interface.",
-      "crafted rest api integrations and database microservices for lemmebuild (lemmebuild.com), a low-code paas platform designed to simplify life (and coding)",
+      "Enhanced Cosmo's (cosmoflow.ai) web navigation and ML workflows using open-source models.",
+      "Built REST APIs and database CRUD microservices for LemmeBuild's low-code platform to simplify life and coding.",
     ],
     period: "Aug 2024 - Nov 2024",
   },
@@ -24,40 +24,53 @@ export const experience = [
 
 export const projects = [
   {
-    title: "Robotic Arm RL",
-    description: "Making a two-segment robotic arm stand and balance at 90 degrees in simulation using Reinforcement Learning",
-    image: "/project-logo/rob.jpg",
-    link: "https://github.com/whonehuljain/roboticArm_RL",
+    title: "Image Metadata Editor",
+    description:
+      "A powerful Go-based CLI tool for bulk image metadata editing. Features intelligent EXIF timestamp correction, sequential time-shift preservation, and automatic filename-based date extraction.",
+    image: "/project-logo/metadata-editor.png",
+    link: "https://github.com/nehulbeans/metadata-editor",
+  },
+  {
+    title: "F1nalyze",
+    description:
+      "Built a predictive model for Formula 1 driver positions using regression, featuring extensive EDA and feature engineering. Ranked 23rd among 76 participants, outperforming 95% of 188 submissions in a Kaggle datathon.",
+    image: "/project-logo/f1.jpg",
+    link: "https://github.com/nehulbeans/F1nalyze",
   },
   {
     title: "Adv. Library Management System",
-    description: "Built and deployed secure RESTful APIs with advanced analytics for book management, users, borrowing, and fines using PostgreSQL (Prisma) and Render.",
+    description:
+      "Designed and implemented RESTful APIs with advanced analytics for book management, borrowing, and fines. Integrated PostgreSQL with Prisma and deployed on Render with secure authentication.",
     image: "/project-logo/adv-lib.webp",
-    link: "https://github.com/whonehuljain/adv-library-ms",
+    link: "https://github.com/nehulbeans/adv-library-ms",
   },
   {
-    title: "Babelfish.db",
-    description: "Your universal translator for human-to-database chats",
+    title: "BabelFish.DB",
+    description:
+      "Developed a natural language interface for conversational database queries, implementing schema inference and query automation to simplify complex queries.",
     image: "/project-logo/babelfish.jpg",
     link: "https://babelfish-db.vercel.app/",
   },
   {
-    title: "Fnalyze",
-    description: "Predicting Formula 1 Driver Standings with Machine Learning",
-    image: "/project-logo/f1.jpg",
-    link: "https://github.com/whonehuljain/F1nalyze",
+    title: "MediMate",
+    description:
+      "Engineered ML-based disease prediction, medicine availability tracking, and a vernacular AI-powered health assistant using Django, Scikit-learn, and WebRTC.",
+    image: "/project-logo/medimate.webp",
+    link: "https://github.com/nehulbeans/medimate",
   },
   {
-    title: "MediMate",
-    description: "AI Health Assistant and Disease Prediction System",
-    image: "/project-logo/medimate.webp",
-    link: "https://github.com/whonehuljain/medimate",
+    title: "Robotic Arm RL",
+    description:
+      "Making a two-segment robotic arm stand and balance at 90 degrees in simulation using Reinforcement Learning.",
+    image: "/project-logo/rob.jpg",
+    link: "https://github.com/nehulbeans/roboticArm_RL",
   },
   {
     title: "Text-to-Animation",
-    description: "Leveraged LLMs and 3brown1blue's python library, Manim to create captivating animations from mere prompts. Project is not public for now on github.",
+    description:
+      "Leveraged LLMs and 3brown1blue's Python library, Manim, to create captivating animations from mere prompts.",
     image: "/project-logo/tta.png",
-    link: "https://github.com/whonehuljain/text-to-animation",
+    link: "https://github.com/nehulbeans/text-to-animation",
   },
 ];
 
@@ -65,72 +78,114 @@ export const skills = [
   {
     name: "GoLang",
     icon: "🐹",
-    description: "Concurrency so easy, even a gopher can do it! Fast, clean, and built for scale.",
+    description:
+      "Concurrency so easy, even a gopher can do it! Fast, clean, and built for scale.",
     logo: "/skill-logo/gopher-logo.png",
   },
   {
-    name: "Kubernetes",
+    name: "Kubernetes & Docker",
     icon: "⎈",
-    description: "Why ship one app when you can orchestrate a fleet? Containers, meet your captain!",
+    description:
+      "Orchestrating containerized fleets, setting up TLS registries, and managing multi-node clusters.",
     logo: "/skill-logo/kubernetes-logo.svg",
   },
   {
     name: "Python",
     icon: "🐍",
-    description: "Every coder's best friend – easy to learn, harder to put down!",
+    description:
+      "Powering ML workflows, data pipelines, and intelligent backends.",
     logo: "/skill-logo/python-logo.png",
   },
   {
-    name: "TensorFlow",
-    icon: "🧠",
-    description: "Sometimes, it's not just about the code, it's about the data!",
-    logo: "/skill-logo/tf-logo.png",
-  },
-  {
-    name: "Django",
-    icon: "dj",
-    description: "Why's there a 'D' if it's just gonna be silent?",
-    logo: "/skill-logo/django-logo.png",
-  },
-  {
-    name: "AWS",
+    name: "AWS & Cloud",
     icon: "☁️",
-    description: "Badal bahut important hai! ☁️, but dude check those AWS bills!",
+    description:
+      "Architecting scalable cloud infrastructure, EC2, S3, and serverless deployments.",
     logo: "/skill-logo/aws-logo.png",
   },
   {
-    name: "Flutter",
-    icon: "📱",
-    description: "What? I heard you need an Android dev!?",
-    logo: "/skill-logo/flutter-logo.png",
+    name: "Machine Learning",
+    icon: "🧠",
+    description:
+      "Scikit-learn, LangChain, TensorFlow & PyTorch. Turning raw data into predictive intelligence.",
+    logo: "/skill-logo/tf-logo.png",
   },
   {
-    name: "Java",
-    icon: "☕",
-    description: "The OG grandparent of programming languages, but still getting the job done! Old is turly gold!",
-    logo: "/skill-logo/java-logo.png",
+    name: "Django & FastAPI",
+    icon: "dj",
+    description:
+      "Building robust, lightning-fast REST APIs and backend microservices.",
+    logo: "/skill-logo/django-logo.png",
   },
   {
-    name: "JavaScript",
+    name: "JavaScript/TypeScript",
     icon: "JS",
-    description: "Coz, who needs sleep when you can have endless debugging!?",
+    description:
+      "Full-stack agility from Express and Node.js to React and Next.js.",
     logo: "/skill-logo/js-logo.svg",
   },
   {
-    name: "Figma",
-    icon: "🎨",
-    description: "Coz, Aesthetics Matter!!",
-    logo: "/skill-logo/figma-logo.png",
+    name: "PostgreSQL & Prisma",
+    icon: "🗄️",
+    description:
+      "Designing reliable database schemas, ORM integrations, and complex query optimizations.",
+    logo: "/skill-logo/postgres-logo.png",
   },
 ];
 
 export const skillTags = [
+  "GoLang",
+  "Cloud & DevOps",
+  "Kubernetes",
   "Machine Learning",
-  "Data",
-  "Cloud",
-  "DevOps",
-  "Backend",
-  "Mobile",
+  "Data Pipelines",
+  "Backend Architecture",
+];
+
+export const research = [
+  {
+    title:
+      "Hybrid Quantum-Classical Learning Architectures for 6G/7G Edge Intelligence",
+    role: "Book Chapter Co-author",
+    link: "https://link.springer.com/chapter/10.1007/978-981-95-1683-4_14",
+    publisher: "Springer",
+    date: "Jan 2026",
+  },
+  {
+    title:
+      "Quantum Convolutional Neural Networks for Intelligent Spectrum Management in 6G/7G",
+    role: "Book Chapter Co-author",
+    link: "https://link.springer.com/chapter/10.1007/978-981-95-1683-4_15",
+    publisher: "Springer",
+    date: "Jan 2026",
+  },
+  {
+    title: "Heart-Attack Analysis and Prediction Using Python",
+    role: "Co-authored research paper",
+    publisher: "Unpublished",
+    date: "",
+  },
+];
+
+export const awards = [
+  {
+    title: "First Prize Winner - Jugaad Hacks",
+    description:
+      "Led team to victory by building an AI-powered spoken language tool for immersive language learning and practicing.",
+    date: "Feb 2024",
+  },
+  {
+    title: "Runner-Up - Data-Vizard Hackathon",
+    description:
+      "Awarded 2nd place among 40+ teams for data-driven insights and exceptional visualization techniques.",
+    date: "Mar 2024",
+  },
+  {
+    title: "Top 5%ile - Adobe GenSolve Hackathon",
+    description:
+      "Recognized for innovative problem-solving and successfully clearing Round 1.",
+    date: "Aug 2024",
+  },
 ];
 
 export const instaPosts = [
@@ -140,4 +195,5 @@ export const instaPosts = [
   "https://www.instagram.com/p/Cygda02vhuw",
 ];
 
-export const resumeUrl = "https://drive.google.com/file/d/1tMi40TVuKpwlUmtukdFu-iLoyj1r2-5o/preview";
+export const resumeUrl =
+  "https://drive.google.com/file/d/1_-lzVJHe7EXlPs33HoqIykDYSb0U9MFx/preview";
