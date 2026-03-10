@@ -1,18 +1,20 @@
-'use client';
+"use client";
 
 import { useEffect, useRef, useState } from "react";
-import TopNavigation from './Navigation/TopNavigation';
-import BottomNavigation from './Navigation/BottomNavigation';
-import ProfileCard from './ProfileCard/ProfileCard';
-import HeroSection from './Sections/HeroSection';
-import CardsSection from './Sections/CardsSection';
-import ExperienceSection from './Sections/ExperienceSection';
-import ProjectsSection from './Sections/ProjectsSection';
-import SkillsSection from './Sections/SkillsSection';
-import ResumeSection from './Sections/ResumeSection';
-import PhotographySection from './Sections/PhotographySection';
-import ContactSection from './Sections/ContactSection';
-import Footer from './UI/Footer';
+import TopNavigation from "./Navigation/TopNavigation";
+import BottomNavigation from "./Navigation/BottomNavigation";
+import ProfileCard from "./ProfileCard/ProfileCard";
+import HeroSection from "./Sections/HeroSection";
+import CardsSection from "./Sections/CardsSection";
+import ExperienceSection from "./Sections/ExperienceSection";
+import ProjectsSection from "./Sections/ProjectsSection";
+import SkillsSection from "./Sections/SkillsSection";
+import ResearchSection from "./Sections/ResearchSection";
+import AwardsSection from "./Sections/AwardsSection";
+import ResumeSection from "./Sections/ResumeSection";
+import PhotographySection from "./Sections/PhotographySection";
+import ContactSection from "./Sections/ContactSection";
+import Footer from "./UI/Footer";
 
 export default function Portfolio() {
   const sectionRefs = {
@@ -20,6 +22,8 @@ export default function Portfolio() {
     experience: useRef(null),
     projects: useRef(null),
     skills: useRef(null),
+    research: useRef(null),
+    awards: useRef(null),
     resume: useRef(null),
     photography: useRef(null),
     contact: useRef(null),
@@ -53,11 +57,14 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white dark:bg-custom-bg text-gray-900 dark:text-white font-poppins transition-colors duration-300">
       {/* Navigation */}
-      <TopNavigation sectionRefs={sectionRefs} scrollToSection={scrollToSection} />
-      <BottomNavigation 
-        sectionRefs={sectionRefs} 
-        scrollToSection={scrollToSection} 
-        showBottomNav={showBottomNav} 
+      <TopNavigation
+        sectionRefs={sectionRefs}
+        scrollToSection={scrollToSection}
+      />
+      <BottomNavigation
+        sectionRefs={sectionRefs}
+        scrollToSection={scrollToSection}
+        showBottomNav={showBottomNav}
       />
 
       {/* Main Content */}
@@ -71,10 +78,15 @@ export default function Portfolio() {
           {/* Main Content Area */}
           <div className="lg:w-2/3 lg:pl-4">
             <HeroSection sectionRef={sectionRefs.home} />
-            <CardsSection scrollToSection={scrollToSection} sectionRefs={sectionRefs} />
+            <CardsSection
+              scrollToSection={scrollToSection}
+              sectionRefs={sectionRefs}
+            />
             <ExperienceSection sectionRef={sectionRefs.experience} />
             <ProjectsSection sectionRef={sectionRefs.projects} />
             <SkillsSection sectionRef={sectionRefs.skills} />
+            <ResearchSection sectionRef={sectionRefs.research} />
+            <AwardsSection sectionRef={sectionRefs.awards} />
             <ResumeSection sectionRef={sectionRefs.resume} />
             <PhotographySection sectionRef={sectionRefs.photography} />
             <ContactSection />
