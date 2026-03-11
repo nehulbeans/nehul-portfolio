@@ -1,193 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family:
+        source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /* Custom scrollbar for PDF container */
 .pdf-container {
-  scrollbar-width: thin;
-  scrollbar-color: #4B5563 #1F2937;
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937;
 }
 
 .pdf-container::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+    width: 8px;
+    height: 8px;
 }
 
 .pdf-container::-webkit-scrollbar-track {
-  background: #1F2937;
-  border-radius: 4px;
+    background: #1f2937;
+    border-radius: 4px;
 }
 
 .pdf-container::-webkit-scrollbar-thumb {
-  background: #4B5563;
-  border-radius: 4px;
+    background: #4b5563;
+    border-radius: 4px;
 }
 
 .pdf-container::-webkit-scrollbar-thumb:hover {
-  background: #6B7280;
+    background: #6b7280;
 }
 
 /* Hide default PDF viewer controls */
 iframe[type="application/pdf"] {
-  background: transparent;
-  border: none;
+    background: transparent;
+    border: none;
 }
 
 @media (max-width: 768px) {
-  iframe[type="application/pdf"] {
-    min-height: 400px;
-  }
+    iframe[type="application/pdf"] {
+        min-height: 400px;
+    }
 }
 
 /* Remove PDF viewer toolbar */
 iframe {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 /* Ensure PDF fits container */
 .pdf-container iframe {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
 }
 
 @layer utilities {
-  .scrollbar-hidden::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .scrollbar-hidden {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .animate-infinite-scroll {
-    animation: infinite-scroll 40s linear infinite;
-  }
-
-  .animate-infinite-scroll:hover,
-  .group:hover .animate-infinite-scroll {
-    animation-play-state: paused;
-  }
-
-  @keyframes infinite-scroll {
-    from {
-      transform: translateX(0);
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
     }
-    to {
-      transform: translateX(-50%);
+
+    .scrollbar-hidden {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
-  }
 
-  /* Navigation Icon Styles */
-  .nav-icon {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
+    .animate-infinite-scroll {
+        animation: infinite-scroll 40s linear infinite;
+    }
 
-  /* Top Navigation Tooltip - appears below */
-  .nav-tooltip-top {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1000;
-    pointer-events: none;
-  }
+    .animate-infinite-scroll:hover,
+    .group:hover .animate-infinite-scroll {
+        animation-play-state: paused;
+    }
 
-  .nav-tooltip-top::after {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-bottom-color: rgba(0, 0, 0, 0.8);
-  }
+    @keyframes infinite-scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
 
-  .nav-icon:hover .nav-tooltip-top {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(4px);
-  }
+    /* Navigation Icon Styles */
+    .nav-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
 
-  /* Bottom Navigation Tooltip - appears above */
-  .nav-tooltip-bottom {
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1000;
-    pointer-events: none;
-  }
+    /* Top Navigation Tooltip - appears below */
+    .nav-tooltip-top {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 1000;
+        pointer-events: none;
+    }
 
-  .nav-tooltip-bottom::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: rgba(0, 0, 0, 0.8);
-  }
+    .nav-tooltip-top::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.8);
+    }
 
-  .nav-icon:hover .nav-tooltip-bottom {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(-4px);
-  }
+    .nav-icon:hover .nav-tooltip-top {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(4px);
+    }
 
-  /* Light theme tooltips */
-  .light .nav-tooltip-top,
-  .light .nav-tooltip-bottom {
-    background: rgba(55, 65, 81, 0.9);
-    color: white;
-  }
+    /* Bottom Navigation Tooltip - appears above */
+    .nav-tooltip-bottom {
+        position: absolute;
+        bottom: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 1000;
+        pointer-events: none;
+    }
 
-  .light .nav-tooltip-top::after {
-    border-bottom-color: rgba(55, 65, 81, 0.9);
-  }
+    .nav-tooltip-bottom::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5px solid transparent;
+        border-top-color: rgba(0, 0, 0, 0.8);
+    }
 
-  .light .nav-tooltip-bottom::after {
-    border-top-color: rgba(55, 65, 81, 0.9);
-  }
+    .nav-icon:hover .nav-tooltip-bottom {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-4px);
+    }
+
+    /* Light theme tooltips */
+    .light .nav-tooltip-top,
+    .light .nav-tooltip-bottom {
+        background: rgba(55, 65, 81, 0.9);
+        color: white;
+    }
+
+    .light .nav-tooltip-top::after {
+        border-bottom-color: rgba(55, 65, 81, 0.9);
+    }
+
+    .light .nav-tooltip-bottom::after {
+        border-top-color: rgba(55, 65, 81, 0.9);
+    }
+}
+
+/* Custom Scrollbar for the Profile Card Back */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px; /* Super thin! */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); /* Slightly brighter when hovered */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
