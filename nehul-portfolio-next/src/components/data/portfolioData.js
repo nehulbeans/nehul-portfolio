@@ -24,6 +24,13 @@ export const experience = [
 
 export const projects = [
   {
+    title: "MultiCloud PaaS Platform",
+    description:
+      "A Go-based platform for multi-cloud deployment and infrastructure management. Provides scalable solutions for managing applications deployed across multiple cloud providers.",
+    image: "/project-logo/multicloud-paas-platform.png",
+    link: "https://github.com/nehulbeans/multicloud-paas-platform",
+  },
+  {
     title: "Image Metadata Editor",
     description:
       "A powerful Go-based CLI tool for bulk image metadata editing. Features intelligent EXIF timestamp correction, sequential time-shift preservation, and automatic filename-based date extraction.",
@@ -41,7 +48,7 @@ export const projects = [
     title: "Adv. Library Management System",
     description:
       "Designed and implemented RESTful APIs with advanced analytics for book management, borrowing, and fines. Integrated PostgreSQL with Prisma and deployed on Render with secure authentication.",
-    image: "/project-logo/adv-lib.webp",
+    image: "/project-logo/adv-lib.png",
     link: "https://github.com/nehulbeans/adv-library-ms",
   },
   {
@@ -187,6 +194,7 @@ export const awards = [
 
 export const instaPosts = [
   "https://www.instagram.com/p/C6mVrpRSTgI",
+  "https://www.instagram.com/p/DWwGuPymG68",
   "https://www.instagram.com/p/C0rTTzOvLge",
   "https://www.instagram.com/p/C-QLVRsPABH",
   "https://www.instagram.com/p/Cygda02vhuw",
