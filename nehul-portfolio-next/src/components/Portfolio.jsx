@@ -8,6 +8,7 @@ import HeroSection from "./Sections/HeroSection";
 import CardsSection from "./Sections/CardsSection";
 import ExperienceSection from "./Sections/ExperienceSection";
 import ProjectsSection from "./Sections/ProjectsSection";
+import GithubSection from "./Sections/GithubSection";
 import SkillsSection from "./Sections/SkillsSection";
 import ResearchSection from "./Sections/ResearchSection";
 import AwardsSection from "./Sections/AwardsSection";
@@ -85,6 +86,7 @@ export default function Portfolio() {
             <ExperienceSection sectionRef={sectionRefs.experience} />
             <ProjectsSection sectionRef={sectionRefs.projects} />
             <SkillsSection sectionRef={sectionRefs.skills} />
+            <GithubSection />
             <ResearchSection sectionRef={sectionRefs.research} />
             <AwardsSection sectionRef={sectionRefs.awards} />
             <ResumeSection sectionRef={sectionRefs.resume} />

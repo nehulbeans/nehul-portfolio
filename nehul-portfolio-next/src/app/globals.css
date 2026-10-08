@@ -215,3 +215,28 @@ iframe {
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
+
+/* GitHub graph palette (orange theme) */
+:root {
+    --gh-0: #e5e7eb;
+    --gh-1: #fed7aa;
+    --gh-2: #fdba74;
+    --gh-3: #fb923c;
+    --gh-4: #ea580c;
+}
+.dark {
+    --gh-0: #27272a;
+    --gh-1: #5a2d14;
+    --gh-2: #9a3f12;
+    --gh-3: #FA651E;
+    --gh-4: #ffa36b;
+}
+
+@keyframes gh-pop {
+    from { opacity: 0; transform: scale(0.3); }
+    to   { opacity: 1; transform: scale(1); }
+}
+.gh-cell {
+    opacity: 0;
+    animation: gh-pop 0.4s ease-out forwards;
+}
