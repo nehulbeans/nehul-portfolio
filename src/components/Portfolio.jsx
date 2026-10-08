@@ -504,7 +504,7 @@ const Portfolio = () => {
                     <div className="flex flex-col items-center text-center h-full">
                       <div className="relative mb-3">
                         <img
-                          src="/profile.webp"
+                          src="/profile.JPG"
                           alt="Profile"
                           className="w-64 h-72 rounded-2xl object-cover"
                           draggable="false"

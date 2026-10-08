@@ -26,7 +26,7 @@ export async function GET() {
 
     const watchedFilms = feed.items
       .filter((item) => item.link.includes("/film/"))
-      .slice(0, 2) // Get top 2 movies
+      .slice(0, 1) // Get top movie
       .map((item) => {
         const ratingNum = parseFloat(item.memberRating) || 0;
         const fullStars = Math.floor(ratingNum);

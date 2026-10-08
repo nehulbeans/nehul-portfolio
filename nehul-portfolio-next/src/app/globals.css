@@ -240,3 +240,168 @@ iframe {
     opacity: 0;
     animation: gh-pop 0.4s ease-out forwards;
 }
+
+/*profile card*/
+.profile-card-wrap {
+    isolation: isolate;
+}
+
+.profile-card-shadow {
+    position: absolute;
+    inset: 12px;
+    z-index: -1;
+    border-radius: 28px;
+    background: linear-gradient(
+        135deg,
+        rgba(250, 101, 30, 0.22),
+        rgba(163, 230, 53, 0.12)
+    );
+    filter: blur(24px);
+    opacity: 0.55;
+    transition:
+        opacity 500ms ease,
+        transform 500ms ease;
+}
+
+.profile-card:hover .profile-card-shadow {
+    opacity: 0.85;
+    transform: translateY(6px) scale(0.98);
+}
+
+.profile-card-side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.profile-paper {
+    background-image:
+        radial-gradient(rgba(24, 24, 23, 0.09) 0.7px, transparent 0.7px),
+        radial-gradient(rgba(24, 24, 23, 0.06) 0.7px, transparent 0.7px);
+    background-position:
+        0 0,
+        8px 8px;
+    background-size:
+        16px 16px,
+        16px 16px;
+    mix-blend-mode: multiply;
+}
+
+.profile-back-texture {
+    background:
+        radial-gradient(circle at 90% 0%, rgba(250, 101, 30, 0.14), transparent 34%),
+        radial-gradient(circle at 0% 100%, rgba(132, 204, 22, 0.1), transparent 32%),
+        radial-gradient(rgba(24, 24, 23, 0.07) 0.7px, transparent 0.7px);
+    background-size: auto, auto, 16px 16px;
+}
+
+.dark .profile-back-texture {
+    background:
+        radial-gradient(circle at 90% 0%, rgba(250, 101, 30, 0.18), transparent 34%),
+        radial-gradient(circle at 0% 100%, rgba(163, 230, 53, 0.08), transparent 32%),
+        radial-gradient(rgba(255, 255, 255, 0.05) 0.7px, transparent 0.7px);
+    background-size: auto, auto, 16px 16px;
+}
+
+.profile-card .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.profile-card .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 999px;
+}
+
+.dark .profile-card .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.profile-card .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.dark .profile-card .custom-scrollbar {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-card *,
+    .profile-card {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/*music section*/
+.music-bar {
+    display: inline-block;
+    width: 2px;
+    border-radius: 99px;
+    background: #86efac;
+    animation: music-bounce 0.8s ease-in-out infinite alternate;
+}
+
+.music-bar:nth-child(2) {
+    animation-delay: 180ms;
+}
+
+.music-bar:nth-child(3) {
+    animation-delay: 360ms;
+}
+
+@keyframes music-bounce {
+    from {
+        transform: scaleY(0.45);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .music-bar {
+        animation: none;
+    }
+}
+
+
+
+/*projects*/
+
+.project-tile {
+    isolation: isolate;
+}
+
+.project-tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        115deg,
+        transparent 30%,
+        rgba(250, 101, 30, 0.045) 50%,
+        transparent 70%
+    );
+    opacity: 0;
+    transform: translateX(-12%);
+    transition:
+        opacity 220ms ease,
+        transform 500ms ease;
+}
+
+.project-tile:hover::before {
+    opacity: 1;
+    transform: translateX(12%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-tile,
+    .project-tile *,
+    .project-tile::before {
+        transition: none !important;
+        transform: none !important;
+    }
+}

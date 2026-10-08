@@ -22,62 +22,105 @@ export const experience = [
   },
 ];
 
+export const projectIconNames = {
+  image: "file-image",
+  formula: "chart-no-axes-combined",
+  library: "library-big",
+  database: "database-zap",
+  health: "heart-pulse",
+  robotics: "bot",
+  animation: "sparkles",
+  multicloud: "cloud-cog",
+};
+
 export const projects = [
   {
     title: "MultiCloud PaaS Platform",
     description:
-      "A Go-based platform for multi-cloud deployment and infrastructure management. Provides scalable solutions for managing applications deployed across multiple cloud providers.",
+      "A Go-based platform for multi-cloud deployment and infrastructure management. It provides scalable workflows for deploying, operating, and managing applications across multiple cloud providers.",
     image: "/project-logo/multicloud-paas-platform.png",
     link: "https://github.com/nehulbeans/multicloud-paas-platform",
+    icon: projectIconNames.multicloud,
+    type: "Cloud / Go",
+    accent: "orange",
+    cta: "explore the platform",
   },
   {
     title: "Image Metadata Editor",
     description:
-      "A powerful Go-based CLI tool for bulk image metadata editing. Features intelligent EXIF timestamp correction, sequential time-shift preservation, and automatic filename-based date extraction.",
-    image: "/project-logo/metadata-editor.png",
+      "A Go-based CLI tool for bulk image metadata editing. It corrects EXIF timestamps, preserves sequential time shifts, and extracts dates from filenames automatically.",
+    image: "project-logo/metadata-editor.png",
     link: "https://github.com/nehulbeans/metadata-editor",
+    icon: projectIconNames.image,
+    type: "CLI / Go",
+    accent: "orange",
+    cta: "inspect the metadata",
   },
   {
     title: "F1nalyze",
     description:
-      "Built a predictive model for Formula 1 driver positions using regression, featuring extensive EDA and feature engineering. Ranked 23rd among 76 participants, outperforming 95% of 188 submissions in a Kaggle datathon.",
-    image: "/project-logo/f1.jpg",
+      "A predictive model for Formula 1 driver positions using regression, with extensive exploratory analysis and feature engineering. Ranked 23rd among 76 participants and outperformed 95 of 188 submissions in a Kaggle datathon.",
+    image: "project-logo/f1.jpg",
     link: "https://github.com/nehulbeans/F1nalyze",
+    icon: projectIconNames.formula,
+    type: "ML / Python",
+    accent: "lime",
+    cta: "predict the podium",
   },
   {
     title: "Adv. Library Management System",
     description:
-      "Designed and implemented RESTful APIs with advanced analytics for book management, borrowing, and fines. Integrated PostgreSQL with Prisma and deployed on Render with secure authentication.",
-    image: "/project-logo/adv-lib.png",
+      "A library management platform with REST APIs, borrowing workflows, fine tracking, advanced analytics, PostgreSQL, Prisma, and secure authentication. Deployed on Render.",
+    image: "project-logo/adv-lib.webp",
     link: "https://github.com/nehulbeans/adv-library-ms",
+    icon: projectIconNames.library,
+    type: "API / PostgreSQL",
+    accent: "orange",
+    cta: "open the library",
   },
   {
     title: "BabelFish.DB",
     description:
-      "Developed a natural language interface for conversational database queries, implementing schema inference and query automation to simplify complex queries.",
-    image: "/project-logo/babelfish.jpg",
-    link: "https://babelfish-db.vercel.app/",
+      "A natural-language interface for conversational database queries. It infers database schemas and automates query generation so people can explore complex data without writing SQL manually.",
+    image: "project-logo/babelfish.jpg",
+    link: "https://babelfish-db.vercel.app",
+    icon: projectIconNames.database,
+    type: "AI / Databases",
+    accent: "lime",
+    cta: "talk to the database",
   },
   {
     title: "MediMate",
     description:
-      "Engineered ML-based disease prediction, medicine availability tracking, and a vernacular AI-powered health assistant using Django, Scikit-learn, and WebRTC.",
-    image: "/project-logo/medimate.webp",
+      "An ML-powered healthcare assistant with disease prediction, medicine availability tracking, and a vernacular AI assistant. Built with Django, Scikit-learn, and WebRTC.",
+    image: "project-logo/medimate.webp",
     link: "https://github.com/nehulbeans/medimate",
+    icon: projectIconNames.health,
+    type: "ML / Django",
+    accent: "orange",
+    cta: "meet MediMate",
   },
   {
     title: "Robotic Arm RL",
     description:
-      "Making a two-segment robotic arm stand and balance at 90 degrees in simulation using Reinforcement Learning.",
-    image: "/project-logo/rob.jpg",
-    link: "https://github.com/nehulbeans/roboticArm_RL",
+      "A reinforcement-learning experiment that teaches a two-segment robotic arm to stand and balance at 90 degrees inside a simulation environment.",
+    image: "project-logo/rob.jpg",
+    link: "https://github.com/nehulbeans/roboticArmRL",
+    icon: projectIconNames.robotics,
+    type: "RL / Simulation",
+    accent: "lime",
+    cta: "watch it balance",
   },
   {
     title: "Text-to-Animation",
     description:
-      "Leveraged LLMs and 3brown1blue's Python library, Manim, to create captivating animations from mere prompts.",
-    image: "/project-logo/tta.png",
+      "An experiment that uses an LLM and the 3Blue1Brown Manim library to turn natural-language prompts into explainable mathematical animations.",
+    image: "project-logo/tta.png",
     link: "https://github.com/nehulbeans/text-to-animation",
+    icon: projectIconNames.animation,
+    type: "LLM / Manim",
+    accent: "orange",
+    cta: "animate an idea",
   },
 ];
 

@@ -70,9 +70,9 @@ export default function Portfolio() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 pt-8">
-        <div className="flex flex-col lg:flex-row gap-16 mx-auto">
+<div className="flex flex-col lg:flex-row gap-12 xl:gap-16 mx-auto">
           {/* Sticky Sidebar */}
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 lg:max-w-[390px]">
             <ProfileCard />
           </div>
 
