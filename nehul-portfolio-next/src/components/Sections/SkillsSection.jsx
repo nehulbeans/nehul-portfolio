@@ -1,44 +1,55 @@
-import { skills } from '../data/portfolioData';
+import { skills } from "../data/portfolioData";
 
 export default function SkillsSection({ sectionRef }) {
   return (
-    <section ref={sectionRef} id="skills" className="mb-16 px-4">
-      <h2 className="text-5xl text-center lg:text-8xl lg:text-left font-bold mb-12">
-        MY SKILLS &
-        <span className="text-gray-500 dark:text-zinc-500 lg:text-7xl block">
-          TOOLKIT
-          <span className="inline-block ml-2"> 🛠️</span>
-        </span>
-      </h2>
+    <section ref={sectionRef} id="skills" className="mb-20">
+      <div className="mb-9 flex items-end justify-between gap-4">
+        <h2 className="text-center text-5xl font-bold lg:text-left lg:text-8xl">
+          MY SKILLS &
+          <span className="block text-gray-500 dark:text-zinc-500 lg:text-7xl">
+            TOOLKIT
+            <span className="ml-2 inline-block">🛠️</span>
+          </span>
+        </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {skills.map((skill) => (
-          <div
-            key={skill.name}
-            className="flex items-center gap-4 bg-gray-100 dark:bg-zinc-900/50 rounded-xl p-4 hover:bg-gray-200 dark:hover:bg-zinc-800/50 transition-all duration-300 group"
-          >
-            {/* Logo Section */}
-            <div className="w-12 h-12 flex-shrink-0">
-              <img
-                src={skill.logo}
-                alt={`${skill.name} logo`}
-                className="w-full h-full object-contain"
-                draggable="false"
-                onContextMenu={(e) => e.preventDefault()}
-              />
-            </div>
+      </div>
 
-            {/* Content Section */}
-            <div className="flex-grow">
-              <h3 className="font-semibold text-xl mb-1 group-hover:text-orange-500 transition-colors">
-                {skill.name}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-zinc-400">
-                {skill.description}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        {skills.map((skill, index) => {
+          const isLime = index === 1 || index === 4 || index === 7;
+
+          return (
+            <article
+              key={skill.name}
+              className="skill-tile group relative min-h-[142px] overflow-hidden rounded-3xl bg-gray-50 p-4 transition-colors duration-200 hover:bg-orange-50 dark:bg-zinc-900/60 dark:hover:bg-zinc-900 sm:min-h-[170px] sm:p-5"
+            >
+              <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/[0.04] transition-colors duration-200 group-hover:ring-orange-500/30 dark:bg-zinc-800 dark:ring-white/[0.05]">
+                <img
+                  src={skill.logo}
+                  alt={`${skill.name} logo`}
+                  className="h-full w-full object-contain"
+                  draggable="false"
+                  onContextMenu={(event) => event.preventDefault()}
+                />
+              </div>
+
+              <div className="relative mt-5">
+                <h3 className="text-base font-semibold leading-tight transition-colors duration-200 group-hover:text-orange-500 sm:text-lg">
+                  {skill.name}
+                </h3>
+
+                <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+                  {skill.description}
+                </p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      <div className="mt-5 flex items-center justify-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+
+        <span>Learning in public, building in production.</span>
       </div>
     </section>
   );

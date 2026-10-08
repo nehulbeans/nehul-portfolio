@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import TopNavigation from "./Navigation/TopNavigation";
-import BottomNavigation from "./Navigation/BottomNavigation";
 import ProfileCard from "./ProfileCard/ProfileCard";
 import HeroSection from "./Sections/HeroSection";
 import CardsSection from "./Sections/CardsSection";
@@ -18,6 +17,16 @@ import ContactSection from "./Sections/ContactSection";
 import Footer from "./UI/Footer";
 
 export default function Portfolio() {
+
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    const nextTheme = !darkMode;
+    setDarkMode(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme);
+    localStorage.setItem("theme", nextTheme ? "dark" : "light");
+  };
+
   const sectionRefs = {
     home: useRef(null),
     experience: useRef(null),
@@ -42,30 +51,14 @@ export default function Portfolio() {
 
   const [showBottomNav, setShowBottomNav] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const topNav = document.getElementById("top-nav");
-      if (!topNav) return;
-
-      const rect = topNav.getBoundingClientRect();
-      setShowBottomNav(rect.bottom < 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white dark:bg-custom-bg text-gray-900 dark:text-white font-poppins transition-colors duration-300">
       {/* Navigation */}
       <TopNavigation
         sectionRefs={sectionRefs}
         scrollToSection={scrollToSection}
-      />
-      <BottomNavigation
-        sectionRefs={sectionRefs}
-        scrollToSection={scrollToSection}
-        showBottomNav={showBottomNav}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
 
       {/* Main Content */}

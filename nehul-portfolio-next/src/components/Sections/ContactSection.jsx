@@ -38,7 +38,7 @@ export default function ContactSection() {
         formRef.current,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
-      
+
       setIsSubmitted(true);
     } catch (error) {
       console.error('Failed to send email:', error);
