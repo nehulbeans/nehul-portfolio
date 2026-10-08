@@ -85,8 +85,8 @@ export default function Portfolio() {
             />
             <ExperienceSection sectionRef={sectionRefs.experience} />
             <ProjectsSection sectionRef={sectionRefs.projects} />
-            <SkillsSection sectionRef={sectionRefs.skills} />
             <GithubSection />
+            <SkillsSection sectionRef={sectionRefs.skills} />
             <ResearchSection sectionRef={sectionRefs.research} />
             <AwardsSection sectionRef={sectionRefs.awards} />
             <ResumeSection sectionRef={sectionRefs.resume} />

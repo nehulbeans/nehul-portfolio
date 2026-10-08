@@ -170,7 +170,7 @@ export default function ProfileCardBack({ onFlip }) {
                 <SectionHeader
                   icon={BookOpen}
                   label="reading"
-                  href="https://fable.co/"
+                  href="fable.co/fabler/nehul-962688577407"
                   color="text-lime-600 dark:text-lime-300"
                 />
 
@@ -274,7 +274,7 @@ export default function ProfileCardBack({ onFlip }) {
                 <SectionHeader
                   icon={Music2}
                   label="last played"
-                  href="https://www.last.fm/"
+                  href="https://www.last.fm/user/nehuljainn"
                   color="text-green-600 dark:text-green-300"
                 />
 
