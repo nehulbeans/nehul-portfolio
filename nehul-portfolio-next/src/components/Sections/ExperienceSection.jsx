@@ -28,20 +28,20 @@ export default function ExperienceSection({ sectionRef }) {
                 className="experience-entry group relative block pl-12 sm:pl-16"
               >
                 {/* Timeline node */}
-                <div className="absolute left-0 top-6 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-400 transition-colors duration-200 group-hover:border-orange-300 group-hover:text-orange-500 dark:border-zinc-800 dark:bg-custom-bg dark:text-zinc-500 sm:h-11 sm:w-11">
+                <div className="absolute left-0 top-6 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-400 transition-colors duration-200 group-hover:border-coral-300 group-hover:text-coral-500 dark:border-zinc-800 dark:bg-custom-bg dark:text-zinc-500 sm:h-11 sm:w-11">
                   {isCurrent ? (
                     <span className="relative flex h-3 w-3">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-40 motion-reduce:animate-none" />
-                      <span className="relative inline-flex h-3 w-3 rounded-full bg-lime-400" />
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-chartreuse-400 opacity-40 motion-reduce:animate-none" />
+                      <span className="relative inline-flex h-3 w-3 rounded-full bg-chartreuse-400" />
                     </span>
                   ) : (
                     <CircleDot size={17} strokeWidth={1.7} />
                   )}
                 </div>
 
-                <div className="relative overflow-hidden rounded-3xl bg-gray-50 p-5 transition-colors duration-200 group-hover:bg-orange-50 dark:bg-zinc-900/60 dark:group-hover:bg-zinc-900 sm:p-6">
+                <div className="relative overflow-hidden rounded-3xl bg-gray-50 p-5 transition-colors duration-200 group-hover:bg-coral-50 dark:bg-zinc-900/60 dark:group-hover:bg-zinc-900 sm:p-6">
                   {/* Very subtle corner accent */}
-                  <span className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-orange-500/[0.045] transition-transform duration-300 group-hover:scale-125" />
+                  <span className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-coral-500/[0.045] transition-transform duration-300 group-hover:scale-125" />
 
                   <div className="relative flex items-start justify-between gap-4">
                     <div className="flex min-w-0 items-center gap-3">
@@ -57,12 +57,12 @@ export default function ExperienceSection({ sectionRef }) {
 
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                          <h3 className="text-lg font-semibold leading-tight text-zinc-900 transition-colors duration-200 group-hover:text-orange-500 dark:text-white sm:text-xl">
+                          <h3 className="text-lg font-semibold leading-tight text-zinc-900 transition-colors duration-200 group-hover:text-coral-500 dark:text-white sm:text-xl">
                             {item.company}
                           </h3>
 
                           {isCurrent && (
-                            <span className="rounded-full bg-lime-400 px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-zinc-900">
+                            <span className="rounded-full bg-chartreuse-400 px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-zinc-900">
                               now
                             </span>
                           )}
@@ -74,7 +74,7 @@ export default function ExperienceSection({ sectionRef }) {
                       </div>
                     </div>
 
-                    <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-zinc-400 transition-colors duration-200 group-hover:bg-orange-500 group-hover:text-white">
+                    <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-zinc-400 transition-colors duration-200 group-hover:bg-coral-500 group-hover:text-white">
                       <ArrowUpRight size={16} strokeWidth={1.8} />
                     </span>
                   </div>
@@ -88,7 +88,7 @@ export default function ExperienceSection({ sectionRef }) {
                         >
                           <span
                             className={`mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full ${
-                              isCurrent ? "bg-lime-400" : "bg-orange-500"
+                              isCurrent ? "bg-chartreuse-400" : "bg-coral-500"
                             }`}
                           />
                           <span>{point}</span>

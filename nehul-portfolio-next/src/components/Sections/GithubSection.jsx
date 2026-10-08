@@ -50,23 +50,23 @@ export default function GithubSection() {
         </span>
       </h2>
 
-      <div className="bg-gray-100 dark:bg-zinc-900/50 rounded-3xl p-6 hover:shadow-xl hover:shadow-orange-500/10 transition-shadow duration-300">
+      <div className="bg-gray-100 dark:bg-zinc-900/50 rounded-3xl p-6 hover:shadow-xl hover:shadow-coral-500/10 transition-shadow duration-300">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
           <a
             href={`https://github.com/${USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 font-semibold hover:text-orange-500 transition-colors"
+            className="flex items-center gap-2 font-semibold hover:text-coral-500 transition-colors"
           >
             <Github className="w-5 h-5" />@{USERNAME}
           </a>
 
           {data && (
             <div className="flex gap-3 text-sm">
-              <span className="px-3 py-1 rounded-full bg-orange-500 text-white font-semibold">
+              <span className="px-3 py-1 rounded-full bg-coral-500 text-white font-semibold">
                 {data.total} contributions
               </span>
-              <span className="px-3 py-1 rounded-full bg-lime-400 text-zinc-900 font-semibold">
+              <span className="px-3 py-1 rounded-full bg-chartreuse-400 text-zinc-900 font-semibold">
                 {calcStreak(days)} day streak
               </span>
               <span className="hidden sm:inline px-3 py-1 rounded-full bg-gray-200 dark:bg-zinc-800 text-gray-600 dark:text-zinc-300">
@@ -80,7 +80,7 @@ export default function GithubSection() {
           <p className="text-sm text-gray-500 dark:text-zinc-400">
             Couldn't load the graph right now.{" "}
             <a
-              className="text-orange-500 underline"
+              className="text-coral-500 underline"
               href={`https://github.com/${USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -111,7 +111,7 @@ export default function GithubSection() {
                     <div
                       key={d.date}
                       onMouseEnter={() => setHover(d)}
-                      className="gh-cell aspect-square w-full rounded-[3px] hover:scale-125 hover:ring-1 hover:ring-orange-400 transition-transform"
+                      className="gh-cell aspect-square w-full rounded-[3px] hover:scale-125 hover:ring-1 hover:ring-coral-400 transition-transform"
                       style={{
                         backgroundColor: `var(--gh-${d.level})`,
                         animationDelay: `${Math.floor(i / 7) * 12}ms`,

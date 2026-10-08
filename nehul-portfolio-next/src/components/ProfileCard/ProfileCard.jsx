@@ -58,7 +58,7 @@ export default function ProfileCard() {
             <div className="relative flex h-full flex-col">
               {/* Photo */}
               <div className="relative min-h-0 flex-1">
-                <div className="absolute -inset-1 rotate-[1.5deg] rounded-[22px] bg-orange-500/20 transition-transform duration-500 group-hover:rotate-[3deg]" />
+                <div className="absolute -inset-1 rotate-[1.5deg] rounded-[22px] bg-coral-500/20 transition-transform duration-500 group-hover:rotate-[3deg]" />
                 <div className="relative h-full overflow-hidden rounded-[20px] border-4 border-white bg-zinc-200 shadow-md">
                   <img
                     src="/profile.JPG"
@@ -73,7 +73,7 @@ export default function ProfileCard() {
               {/* Name */}
               <div className="mt-5 text-center">
                 <h1 className="text-[28px] font-extrabold leading-none tracking-[-0.05em] text-zinc-950">
-                  Nehul Jain<span className="text-orange-500">.</span>
+                  Nehul Jain<span className="text-coral-500">.</span>
                 </h1>
                 <p className="mt-2 text-sm text-zinc-500">
                   i do stuff! still figuring out my life!
@@ -91,7 +91,7 @@ export default function ProfileCard() {
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                     onClick={stop}
-                    className="flex h-9 w-9 items-center justify-center rounded-full text-orange-500 transition-all hover:-translate-y-0.5 hover:bg-orange-500 hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-full text-coral-500 transition-all hover:-translate-y-0.5 hover:bg-coral-500 hover:text-white"
                   >
                     <Icon size={17} strokeWidth={1.9} />
                   </a>
@@ -103,7 +103,7 @@ export default function ProfileCard() {
                 {skillTags.slice(0, MAX_TAGS).map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full bg-orange-500 px-2.5 py-1 text-[11px] font-medium text-white"
+                    className="rounded-full bg-coral-500 px-2.5 py-1 text-[11px] font-medium text-white"
                   >
                     {skill}
                   </span>
@@ -114,7 +114,7 @@ export default function ProfileCard() {
               <button
                 type="button"
                 onClick={flipCard}
-                className="mx-auto mt-4 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-zinc-400 transition-colors hover:text-orange-500"
+                className="mx-auto mt-4 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-zinc-400 transition-colors hover:text-coral-500"
               >
                 <RotateCw size={12} />
                 flip for off-duty me

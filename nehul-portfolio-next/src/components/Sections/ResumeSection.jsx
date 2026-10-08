@@ -45,7 +45,7 @@ export default function ResumeSection({ sectionRef }) {
           {/* Toolbar */}
           <div className="flex flex-col gap-4 border-b border-zinc-200 bg-white px-5 py-4 dark:border-zinc-800 dark:bg-zinc-900 sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <div className="flex min-w-0 items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-coral-500 text-white">
                 <FileText size={19} strokeWidth={1.8} />
               </div>
 
@@ -64,7 +64,7 @@ export default function ResumeSection({ sectionRef }) {
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-3.5 py-2 text-xs font-medium text-zinc-700 transition-colors hover:border-orange-300 hover:text-orange-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
+                className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-3.5 py-2 text-xs font-medium text-zinc-700 transition-colors hover:border-coral-300 hover:text-coral-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200"
               >
                 <Maximize2 size={14} strokeWidth={1.8} />
                 open
@@ -73,7 +73,7 @@ export default function ResumeSection({ sectionRef }) {
               <a
                 href={pdfUrl}
                 download="Nehul_Jain_Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3.5 py-2 text-xs font-medium text-white transition-colors hover:bg-orange-600"
+                className="inline-flex items-center gap-2 rounded-full bg-coral-500 px-3.5 py-2 text-xs font-medium text-white transition-colors hover:bg-coral-600"
               >
                 <Download size={14} strokeWidth={1.8} />
                 download
@@ -87,7 +87,7 @@ export default function ResumeSection({ sectionRef }) {
 
             {!loaded && (
               <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 text-zinc-500 dark:text-zinc-400">
-                <LoaderCircle size={22} className="animate-spin text-orange-500" />
+                <LoaderCircle size={22} className="animate-spin text-coral-500" />
                 <span className="text-sm">opening résumé…</span>
               </div>
             )}
@@ -127,7 +127,7 @@ export default function ResumeSection({ sectionRef }) {
             {/* Modal toolbar */}
             <div className="flex shrink-0 items-center justify-between border-b border-zinc-200 bg-white px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900 sm:px-5">
               <div className="flex min-w-0 items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-orange-500 text-white">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-coral-500 text-white">
                   <FileText size={17} strokeWidth={1.8} />
                 </div>
 
@@ -145,7 +145,7 @@ export default function ResumeSection({ sectionRef }) {
                 <a
                   href={pdfUrl}
                   download="Nehul_Jain_Resume.pdf"
-                  className="hidden items-center gap-2 rounded-full bg-orange-500 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-orange-600 sm:inline-flex"
+                  className="hidden items-center gap-2 rounded-full bg-coral-500 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-coral-600 sm:inline-flex"
                 >
                   <Download size={14} strokeWidth={1.8} />
                   download
@@ -155,7 +155,7 @@ export default function ResumeSection({ sectionRef }) {
                   type="button"
                   onClick={closeModal}
                   aria-label="Close resume preview"
-                  className="flex h-9 w-9 items-center justify-center rounded-full text-zinc-500 transition-colors hover:bg-orange-500 hover:text-white dark:text-zinc-400"
+                  className="flex h-9 w-9 items-center justify-center rounded-full text-zinc-500 transition-colors hover:bg-coral-500 hover:text-white dark:text-zinc-400"
                 >
                   <X size={19} />
                 </button>

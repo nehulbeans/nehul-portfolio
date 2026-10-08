@@ -72,7 +72,7 @@ export default function ContactSection() {
                     name="user_name"
                     required
                     placeholder="Your Name"
-                    className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                    className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export default function ContactSection() {
                     name="user_email"
                     required
                     placeholder="Your Email"
-                    className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                    className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                   />
                 </div>
               </div>
@@ -97,13 +97,13 @@ export default function ContactSection() {
                   required
                   placeholder="Your Message"
                   rows={4}
-                  className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                  className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-coral-500 hover:bg-coral-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isLoading ? (
                   <div className="flex items-center gap-2">

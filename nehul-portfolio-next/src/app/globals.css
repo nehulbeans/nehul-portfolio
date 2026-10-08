@@ -4,24 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --page-background: #fafaf8;
+    --page-surface: #f2f2ee;
+    --page-text: #1d1d1b;
+    --page-muted: #777775;
+    --accent-primary: #f06a4d;
+    --accent-primary-soft: rgba(240, 106, 77, 0.12);
+    --accent-secondary: #c7f05a;
+    --border-soft: #e2e2dc;
+}
+
+.dark {
+    --page-background: #141414;
+    --page-surface: #1d1d1b;
+    --page-text: #f7f7f2;
+    --page-muted: #a5a5a0;
+    --accent-primary: #f47c61;
+    --accent-primary-soft: rgba(244, 124, 97, 0.14);
+    --accent-secondary: #d8f47f;
+    --border-soft: #343431;
+}
+
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background: var(--page-background);
+    color: var(--page-text);
 }
 
 code {
     font-family:
         source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-:root {
-    --page-background: #ffffff;
-}
-
-.dark {
-    --page-background: #151312;
 }
 
 @media (max-width: 768px) {
@@ -238,20 +250,21 @@ code {
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
-/* GitHub graph palette (orange theme) */
+/* GitHub graph palette (coral theme) */
 :root {
-    --gh-0: #e5e7eb;
-    --gh-1: #fed7aa;
-    --gh-2: #fdba74;
-    --gh-3: #fb923c;
-    --gh-4: #ea580c;
+    --gh-0: #e7e7e1;
+    --gh-1: #f8c3b4;
+    --gh-2: #f89a83;
+    --gh-3: #f06a4d;
+    --gh-4: #b94734;
 }
+
 .dark {
-    --gh-0: #27272a;
-    --gh-1: #5a2d14;
-    --gh-2: #9a3f12;
-    --gh-3: #FA651E;
-    --gh-4: #ffa36b;
+    --gh-0: #292927;
+    --gh-1: #5f3830;
+    --gh-2: #9d513f;
+    --gh-3: #f06a4d;
+    --gh-4: #ff9d85;
 }
 
 @keyframes gh-pop {

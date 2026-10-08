@@ -39,7 +39,7 @@ function Artwork({ src, alt, icon: Icon }) {
   }
 
   return (
-    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-black/5 text-orange-500 dark:bg-white/10 dark:text-orange-300">
+    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-black/5 text-coral-500 dark:bg-white/10 dark:text-coral-300">
       <Icon size={18} strokeWidth={1.7} />
     </div>
   );
@@ -61,7 +61,7 @@ function SectionHeader({ icon: Icon, label, href, color }) {
         rel="noopener noreferrer"
         onClick={(event) => event.stopPropagation()}
         aria-label={`Open ${label}`}
-        className="text-zinc-400 transition-colors hover:text-orange-500 dark:text-zinc-500 dark:hover:text-orange-400"
+        className="text-zinc-400 transition-colors hover:text-coral-500 dark:text-zinc-500 dark:hover:text-coral-400"
       >
         <ExternalLink size={13} />
       </a>
@@ -80,7 +80,7 @@ function Rating({ rating }) {
 }
 
 const titleClass =
-  "truncate text-sm font-medium text-zinc-900 transition-colors group-hover:text-orange-500 dark:text-zinc-100 dark:group-hover:text-orange-300";
+  "truncate text-sm font-medium text-zinc-900 transition-colors group-hover:text-coral-500 dark:text-zinc-100 dark:group-hover:text-coral-300";
 
 const subClass = "truncate text-xs text-zinc-500 dark:text-zinc-500";
 
@@ -147,7 +147,7 @@ export default function ProfileCardBack({ onFlip }) {
         <div className="flex items-start justify-between">
           <div>
             <h2 className="mt-3 text-3xl font-extrabold tracking-[-0.06em]">
-              Off the clock<span className="text-orange-500">.</span>
+              Off the clock<span className="text-coral-500">.</span>
             </h2>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function ProfileCardBack({ onFlip }) {
                   icon={BookOpen}
                   label="reading"
                   href="fable.co/fabler/nehul-962688577407"
-                  color="text-lime-600 dark:text-lime-300"
+                  color="text-chartreuse-600 dark:text-chartreuse-300"
                 />
 
                 {books.length > 0 ? (
@@ -213,7 +213,7 @@ export default function ProfileCardBack({ onFlip }) {
                   icon={Film}
                   label="recently watched"
                   href="https://letterboxd.com/seasonsofnehul/"
-                  color="text-orange-600 dark:text-orange-300"
+                  color="text-coral-600 dark:text-coral-300"
                 />
 
                 {movies.length > 0 ? (
@@ -225,7 +225,7 @@ export default function ProfileCardBack({ onFlip }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(event) => event.stopPropagation()}
-                        className="group block rounded-xl border border-transparent p-2.5 transition-colors hover:border-orange-500/15 hover:bg-orange-500/[0.05] dark:hover:bg-orange-500/[0.06]"
+                        className="group block rounded-xl border border-transparent p-2.5 transition-colors hover:border-coral-500/15 hover:bg-coral-500/[0.05] dark:hover:bg-coral-500/[0.06]"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
@@ -245,7 +245,7 @@ export default function ProfileCardBack({ onFlip }) {
                           <div className="mt-2 flex gap-1.5">
                             <Quote
                               size={13}
-                              className="mt-0.5 shrink-0 text-orange-500/70"
+                              className="mt-0.5 shrink-0 text-coral-500/70"
                             />
 
                             <p className="line-clamp-2 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
@@ -254,7 +254,7 @@ export default function ProfileCardBack({ onFlip }) {
                           </div>
                         )}
 
-                        <span className="mt-2 block text-[10px] font-medium text-orange-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                        <span className="mt-2 block text-[10px] font-medium text-coral-500 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                           read on Letterboxd ↗
                         </span>
                       </a>
@@ -317,7 +317,7 @@ export default function ProfileCardBack({ onFlip }) {
             event.stopPropagation();
             onFlip();
           }}
-          className="mt-5 flex items-center gap-2 border-t border-zinc-300/70 pt-4 font-mono text-[10px] uppercase tracking-wider text-zinc-500 transition-colors hover:text-orange-500 dark:border-white/10"
+          className="mt-5 flex items-center gap-2 border-t border-zinc-300/70 pt-4 font-mono text-[10px] uppercase tracking-wider text-zinc-500 transition-colors hover:text-coral-500 dark:border-white/10"
         >
           <ArrowLeft size={14} />
           back to profile

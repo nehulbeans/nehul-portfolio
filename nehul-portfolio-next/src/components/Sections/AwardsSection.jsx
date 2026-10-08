@@ -58,12 +58,12 @@ export default function AwardsSection({ sectionRef }) {
           return (
             <article
               key={`${award.title}-${index}`}
-              className="award-tile group relative flex min-h-[235px] flex-col overflow-hidden rounded-3xl bg-gray-50 p-5 transition-colors duration-200 hover:bg-orange-50 dark:bg-zinc-900/60 dark:hover:bg-zinc-900"
+              className="award-tile group relative flex min-h-[235px] flex-col overflow-hidden rounded-3xl bg-gray-50 p-5 transition-colors duration-200 hover:bg-coral-50 dark:bg-zinc-900/60 dark:hover:bg-zinc-900"
             >
-              <span className="pointer-events-none absolute -bottom-10 -right-10 h-28 w-28 rounded-full bg-orange-500/[0.04]" />
+              <span className="pointer-events-none absolute -bottom-10 -right-10 h-28 w-28 rounded-full bg-coral-500/[0.04]" />
 
               <div className="relative flex items-start justify-between gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-500 transition-colors duration-200 group-hover:bg-orange-500 group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-coral-500/10 text-coral-500 transition-colors duration-200 group-hover:bg-coral-500 group-hover:text-white">
                   <Icon size={21} strokeWidth={1.7} />
                 </div>
 
@@ -73,7 +73,7 @@ export default function AwardsSection({ sectionRef }) {
               </div>
 
               <div className="relative mt-auto pt-8">
-                <h3 className="text-lg font-semibold leading-snug text-zinc-900 transition-colors duration-200 group-hover:text-orange-500 dark:text-white">
+                <h3 className="text-lg font-semibold leading-snug text-zinc-900 transition-colors duration-200 group-hover:text-coral-500 dark:text-white">
                   {award.title}
                 </h3>
 
@@ -85,7 +85,7 @@ export default function AwardsSection({ sectionRef }) {
                   <button
                     type="button"
                     onClick={() => setSelectedAward(award)}
-                    className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-orange-500 transition-colors hover:text-orange-600 dark:hover:text-orange-300"
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-medium text-coral-500 transition-colors hover:text-coral-600 dark:hover:text-coral-300"
                   >
                     <Eye size={14} strokeWidth={1.8} />
                     view certificate
@@ -122,7 +122,7 @@ export default function AwardsSection({ sectionRef }) {
                 type="button"
                 onClick={closeModal}
                 aria-label="Close certificate"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-orange-500"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-coral-500"
               >
                 <X size={20} />
               </button>

@@ -16,7 +16,7 @@ module.exports = {
       backgroundColor: {
         "custom-bg": "#151312",
         "grey-bg": "#1C1A19",
-        "custom-orange": "#FA651E",
+        "custom-coral": "#FA651E",
         "form-bg": "#363334",
       },
       fontFamily: {

@@ -16,14 +16,14 @@ export default function SkillsSection({ sectionRef }) {
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {skills.map((skill, index) => {
-          const isLime = index === 1 || index === 4 || index === 7;
+          const ischartreuse = index === 1 || index === 4 || index === 7;
 
           return (
             <article
               key={skill.name}
-              className="skill-tile group relative min-h-[142px] overflow-hidden rounded-3xl bg-gray-50 p-4 transition-colors duration-200 hover:bg-orange-50 dark:bg-zinc-900/60 dark:hover:bg-zinc-900 sm:min-h-[170px] sm:p-5"
+              className="skill-tile group relative min-h-[142px] overflow-hidden rounded-3xl bg-gray-50 p-4 transition-colors duration-200 hover:bg-coral-50 dark:bg-zinc-900/60 dark:hover:bg-zinc-900 sm:min-h-[170px] sm:p-5"
             >
-              <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/[0.04] transition-colors duration-200 group-hover:ring-orange-500/30 dark:bg-zinc-800 dark:ring-white/[0.05]">
+              <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/[0.04] transition-colors duration-200 group-hover:ring-coral-500/30 dark:bg-zinc-800 dark:ring-white/[0.05]">
                 <img
                   src={skill.logo}
                   alt={`${skill.name} logo`}
@@ -34,7 +34,7 @@ export default function SkillsSection({ sectionRef }) {
               </div>
 
               <div className="relative mt-5">
-                <h3 className="text-base font-semibold leading-tight transition-colors duration-200 group-hover:text-orange-500 sm:text-lg">
+                <h3 className="text-base font-semibold leading-tight transition-colors duration-200 group-hover:text-coral-500 sm:text-lg">
                   {skill.name}
                 </h3>
 

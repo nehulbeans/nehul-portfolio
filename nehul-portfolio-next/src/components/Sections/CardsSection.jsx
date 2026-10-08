@@ -59,9 +59,9 @@ export default function CardsSection({ scrollToSection, sectionRefs }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <TiltCard
           onClick={() => scrollToSection(sectionRefs.experience)}
-          bg="bg-orange-500"
+          bg="bg-coral-500"
           text="text-white"
-          glow="hover:shadow-orange-500/40 hover:shadow-2xl"
+          glow="hover:shadow-coral-500/40 hover:shadow-2xl"
         >
           <Layers className="w-12 h-12 mb-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
           <h3 className="text-2xl font-bold mb-2">
@@ -75,9 +75,9 @@ export default function CardsSection({ scrollToSection, sectionRefs }) {
 
         <TiltCard
           onClick={() => scrollToSection(sectionRefs.projects)}
-          bg="bg-lime-400"
+          bg="bg-chartreuse-400"
           text="text-zinc-900"
-          glow="hover:shadow-lime-400/40 hover:shadow-2xl"
+          glow="hover:shadow-chartreuse-400/40 hover:shadow-2xl"
         >
           <Box className="w-12 h-12 mb-4 transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-110" />
           <h3 className="text-2xl font-bold mb-2">

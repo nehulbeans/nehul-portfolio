@@ -357,7 +357,7 @@ const Portfolio = () => {
               <div key={link.href} className="relative nav-icon">
                 <button
                   onClick={() => scrollToSection(link.ref)}
-                  className="text-gray-700 dark:text-white hover:text-orange-500 transition-colors"
+                  className="text-gray-700 dark:text-white hover:text-coral-500 transition-colors"
                   type="button"
                 >
                   {link.icon}
@@ -373,7 +373,7 @@ const Portfolio = () => {
             <div className="relative nav-icon">
               <button
                 onClick={toggleTheme}
-                className="text-gray-700 dark:text-white hover:text-orange-500 transition-all duration-300 transform hover:scale-110"
+                className="text-gray-700 dark:text-white hover:text-coral-500 transition-all duration-300 transform hover:scale-110"
               >
                 <div className="relative w-5 h-5">
                   <Sun
@@ -415,7 +415,7 @@ const Portfolio = () => {
               <div key={`bottom-${link.href}`} className="relative nav-icon">
                 <button
                   onClick={() => scrollToSection(link.ref)}
-                  className="text-gray-700 dark:text-white hover:text-orange-500 transition-colors"
+                  className="text-gray-700 dark:text-white hover:text-coral-500 transition-colors"
                   type="button"
                 >
                   {link.icon}
@@ -431,7 +431,7 @@ const Portfolio = () => {
             <div className="relative nav-icon">
               <button
                 onClick={toggleTheme}
-                className="text-gray-700 dark:text-white hover:text-orange-500 transition-all duration-300 transform hover:scale-110"
+                className="text-gray-700 dark:text-white hover:text-coral-500 transition-all duration-300 transform hover:scale-110"
               >
                 <div className="relative w-5 h-5">
                   <Sun
@@ -520,7 +520,7 @@ const Portfolio = () => {
                       <div className="flex space-x-8">
                         <a
                           href="https://www.linkedin.com/in/whonehuljain/"
-                          className="text-orange-500 hover:text-zinc-500"
+                          className="text-coral-500 hover:text-zinc-500"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={handleLinkClick}
@@ -529,7 +529,7 @@ const Portfolio = () => {
                         </a>
                         <a
                           href="https://github.com/whonehuljain"
-                          className="text-orange-500 hover:text-zinc-500"
+                          className="text-coral-500 hover:text-zinc-500"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={handleLinkClick}
@@ -538,7 +538,7 @@ const Portfolio = () => {
                         </a>
                         <a
                           href="https://x.com/whonehuljain"
-                          className="text-orange-500 hover:text-zinc-500"
+                          className="text-coral-500 hover:text-zinc-500"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={handleLinkClick}
@@ -547,7 +547,7 @@ const Portfolio = () => {
                         </a>
                         <a
                           href="https://www.instagram.com/nehulscapes"
-                          className="text-orange-500 hover:text-zinc-500"
+                          className="text-coral-500 hover:text-zinc-500"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={handleLinkClick}
@@ -556,7 +556,7 @@ const Portfolio = () => {
                         </a>
                         <a
                           href="mailto:work.nehul@gmail.com"
-                          className="text-orange-500 hover:text-zinc-500"
+                          className="text-coral-500 hover:text-zinc-500"
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={handleLinkClick}
@@ -568,7 +568,7 @@ const Portfolio = () => {
                         {skillTags.map((skill) => (
                           <span
                             key={skill}
-                            className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm"
+                            className="bg-coral-500 text-white px-3 py-1 rounded-full text-sm"
                           >
                             {skill}
                           </span>
@@ -702,7 +702,7 @@ const Portfolio = () => {
                     onClick={() => scrollToSection(sectionRefs.experience)}
                     className="relative group cursor-pointer"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-orange-600/30 to-transparent rounded-3xl opacity-50">
+                    <div className="absolute inset-0 bg-gradient-to-br from-coral-600/30 to-transparent rounded-3xl opacity-50">
                       <div
                         className="absolute inset-0"
                         style={{
@@ -712,7 +712,7 @@ const Portfolio = () => {
                         }}
                       />
                     </div>
-                    <div className="relative bg-orange-500 rounded-3xl p-8 transition-transform duration-300 group-hover:-translate-y-1">
+                    <div className="relative bg-coral-500 rounded-3xl p-8 transition-transform duration-300 group-hover:-translate-y-1">
                       <Layers className="w-12 h-12 mb-4 text-white" />
                       <h3 className="text-2xl font-bold text-white mb-4">
                         PROFESSIONAL
@@ -730,7 +730,7 @@ const Portfolio = () => {
                     onClick={() => scrollToSection(sectionRefs.projects)}
                     className="relative group cursor-pointer"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-lime-400/30 to-transparent rounded-3xl opacity-50">
+                    <div className="absolute inset-0 bg-gradient-to-br from-chartreuse-400/30 to-transparent rounded-3xl opacity-50">
                       <div
                         className="absolute inset-0"
                         style={{
@@ -740,7 +740,7 @@ const Portfolio = () => {
                         }}
                       />
                     </div>
-                    <div className="relative bg-lime-400 rounded-3xl p-8 transition-transform duration-300 group-hover:-translate-y-1">
+                    <div className="relative bg-chartreuse-400 rounded-3xl p-8 transition-transform duration-300 group-hover:-translate-y-1">
                       <Box className="w-12 h-12 mb-4 text-zinc-900" />
                       <h3 className="text-2xl font-bold text-zinc-900">
                         FEATURED PROJECTS
@@ -920,7 +920,7 @@ const Portfolio = () => {
 
                     {/* Content Section */}
                     <div className="flex-grow">
-                      <h3 className="font-semibold text-xl mb-1 group-hover:text-orange-500 transition-colors">
+                      <h3 className="font-semibold text-xl mb-1 group-hover:text-coral-500 transition-colors">
                         {skill.name}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-zinc-400">
@@ -954,7 +954,7 @@ const Portfolio = () => {
                   <a
                     href={"/Nehul_Jain_Resume.pdf"}
                     download="Nehul_Jain_Resume.pdf"
-                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 bg-coral-500 hover:bg-coral-600 text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm"
                   >
                     <Download className="w-4 h-4" />
                     Download Resume
@@ -973,7 +973,7 @@ const Portfolio = () => {
                   >
                     <p className="text-red-500">
                       Sorry, could not load the resume. Please download the PDF!
-                      <a href={resumeUrl} className="text-orange-500 ml-2">
+                      <a href={resumeUrl} className="text-coral-500 ml-2">
                         Download PDF
                       </a>
                     </p>
@@ -1086,7 +1086,7 @@ const Portfolio = () => {
                             name="user_name"
                             required
                             placeholder="Your Name"
-                            className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                            className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                           />
                         </div>
                         <div>
@@ -1098,7 +1098,7 @@ const Portfolio = () => {
                             name="user_email"
                             required
                             placeholder="Your Email"
-                            className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                            className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                           />
                         </div>
                       </div>
@@ -1111,13 +1111,13 @@ const Portfolio = () => {
                           required
                           placeholder="Your Message"
                           rows={4}
-                          className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-orange-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                          className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                         />
                       </div>
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                        className="w-full bg-coral-500 hover:bg-coral-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                       >
                         {isLoading ? (
                           <div className="flex items-center gap-2">

@@ -97,9 +97,9 @@ export default function TopNavigation({
                 onClick={() => scrollToSection(sectionRefs[refName])}
                 aria-label={title}
                 aria-current={active ? "location" : undefined}
-                className={`nav-link group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-zinc-500 transition-colors duration-200 hover:bg-zinc-100 hover:text-orange-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-orange-400 ${
+                className={`nav-link group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-zinc-500 transition-colors duration-200 hover:bg-zinc-100 hover:text-coral-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-coral-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-coral-400 ${
                   active
-                    ? "bg-orange-500/10 text-orange-600 dark:bg-orange-500/10 dark:text-orange-400"
+                    ? "bg-coral-500/10 text-coral-600 dark:bg-coral-500/10 dark:text-coral-400"
                     : ""
                 }`}
               >
@@ -110,7 +110,7 @@ export default function TopNavigation({
                 </span>
 
                 {active && (
-                  <span className="absolute bottom-1 left-1/2 h-0.5 w-3 -translate-x-1/2 rounded-full bg-orange-500" />
+                  <span className="absolute bottom-1 left-1/2 h-0.5 w-3 -translate-x-1/2 rounded-full bg-coral-500" />
                 )}
               </button>
             );
@@ -124,7 +124,7 @@ export default function TopNavigation({
           onClick={toggleTheme}
           aria-label={`Switch to ${darkMode ? "light" : "dark"} theme`}
           title={`Switch to ${darkMode ? "light" : "dark"} theme`}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-zinc-500 transition-colors duration-200 hover:bg-zinc-100 hover:text-orange-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-orange-400"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-zinc-500 transition-colors duration-200 hover:bg-zinc-100 hover:text-coral-500 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-coral-400"
         >
           {darkMode ? (
             <Sun size={17} strokeWidth={1.8} />

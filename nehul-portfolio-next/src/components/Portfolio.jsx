@@ -52,7 +52,7 @@ export default function Portfolio() {
   const [showBottomNav, setShowBottomNav] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-custom-bg text-gray-900 dark:text-white font-poppins transition-colors duration-300">
+    <div className="min-h-screen bg-paper-bg text-zinc-900 transition-colors duration-300 dark:bg-custom-bg dark:text-white">
       {/* Navigation */}
       <TopNavigation
         sectionRefs={sectionRefs}

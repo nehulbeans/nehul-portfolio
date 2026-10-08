@@ -42,7 +42,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/multicloud-paas-platform",
     icon: projectIconNames.multicloud,
     type: "Cloud / Go",
-    accent: "orange",
+    accent: "coral",
     cta: "explore the platform",
   },
   {
@@ -53,7 +53,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/metadata-editor",
     icon: projectIconNames.image,
     type: "CLI / Go",
-    accent: "orange",
+    accent: "coral",
     cta: "inspect the metadata",
   },
   {
@@ -64,7 +64,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/F1nalyze",
     icon: projectIconNames.formula,
     type: "ML / Python",
-    accent: "lime",
+    accent: "chartreuse",
     cta: "predict the podium",
   },
   {
@@ -75,7 +75,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/adv-library-ms",
     icon: projectIconNames.library,
     type: "API / PostgreSQL",
-    accent: "orange",
+    accent: "coral",
     cta: "open the library",
   },
   {
@@ -86,7 +86,7 @@ export const projects = [
     link: "https://babelfish-db.vercel.app",
     icon: projectIconNames.database,
     type: "AI / Databases",
-    accent: "lime",
+    accent: "chartreuse",
     cta: "talk to the database",
   },
   {
@@ -97,7 +97,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/medimate",
     icon: projectIconNames.health,
     type: "ML / Django",
-    accent: "orange",
+    accent: "coral",
     cta: "meet MediMate",
   },
   {
@@ -108,7 +108,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/roboticArmRL",
     icon: projectIconNames.robotics,
     type: "RL / Simulation",
-    accent: "lime",
+    accent: "chartreuse",
     cta: "watch it balance",
   },
   {
@@ -119,7 +119,7 @@ export const projects = [
     link: "https://github.com/nehulbeans/text-to-animation",
     icon: projectIconNames.animation,
     type: "LLM / Manim",
-    accent: "orange",
+    accent: "coral",
     cta: "animate an idea",
   },
 ];

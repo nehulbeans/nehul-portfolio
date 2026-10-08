@@ -88,7 +88,7 @@ export default function PhotographySection({ sectionRef }) {
                   rel="noopener noreferrer"
                   aria-hidden={isDuplicate}
                   tabIndex={isDuplicate ? -1 : 0}
-                  className="photo-carousel-card group/card relative h-[300px] w-[235px] shrink-0 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm transition-all duration-300 hover:border-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 dark:border-zinc-800 dark:bg-zinc-900 sm:h-[350px] sm:w-[270px]"
+                  className="photo-carousel-card group/card relative h-[300px] w-[235px] shrink-0 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 shadow-sm transition-all duration-300 hover:border-coral-500/30 hover:shadow-lg hover:shadow-coral-500/10 dark:border-zinc-800 dark:bg-zinc-900 sm:h-[350px] sm:w-[270px]"
                 >
                   <blockquote
                     className="instagram-media !m-0 !min-w-0 !w-full"
@@ -129,7 +129,7 @@ export default function PhotographySection({ sectionRef }) {
           href="https://www.instagram.com/nehulscapes/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-orange-500 dark:text-zinc-400"
+          className="inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-coral-500 dark:text-zinc-400"
         >
           <Instagram size={15} />
           more frames on Instagram
