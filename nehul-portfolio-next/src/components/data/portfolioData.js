@@ -244,4 +244,4 @@ export const instaPosts = [
 ];
 
 export const resumeUrl =
-  "https://drive.google.com/file/d/1_-lzVJHe7EXlPs33HoqIykDYSb0U9MFx/preview";
+  "https://drive.google.com/file/d/1rrzme4-vf3LBWF5Zsn_y0MjzTEWMg3-b/preview";

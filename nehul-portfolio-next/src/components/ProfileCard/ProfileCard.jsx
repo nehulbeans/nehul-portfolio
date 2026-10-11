@@ -61,7 +61,7 @@ export default function ProfileCard() {
                 <div className="absolute -inset-1 rotate-[1.5deg] rounded-[22px] bg-coral-500/20 transition-transform duration-500 group-hover:rotate-[3deg]" />
                 <div className="relative h-full overflow-hidden rounded-[20px] border-4 border-white bg-zinc-200 shadow-md">
                   <img
-                    src="/profile.JPG"
+                    src="/profile.webp"
                     alt="Nehul Jain"
                     className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                     draggable="false"
