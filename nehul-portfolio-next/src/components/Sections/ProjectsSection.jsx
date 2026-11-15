@@ -1,10 +1,12 @@
 import {
   ArrowUpRight,
+  AudioLines,
   Bot,
   ChartNoAxesCombined,
   CloudCog,
   DatabaseZap,
   FileImage,
+  Gauge,
   HeartPulse,
   LibraryBig,
   Sparkles,
@@ -20,6 +22,8 @@ const iconMap = {
   bot: Bot,
   sparkles: Sparkles,
   "cloud-cog": CloudCog,
+  gauge: Gauge,
+  "audio-lines": AudioLines,
 };
 
 const accentClasses = {

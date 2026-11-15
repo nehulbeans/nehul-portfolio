@@ -31,6 +31,8 @@ export const projectIconNames = {
   robotics: "bot",
   animation: "sparkles",
   multicloud: "cloud-cog",
+  metrics: "gauge",
+  voice: "audio-lines",
 };
 
 export const projects = [
@@ -46,15 +48,15 @@ export const projects = [
     cta: "explore the platform",
   },
   {
-    title: "Image Metadata Editor",
+    title: "ShardMetrics",
     description:
-      "A Go-based CLI tool for bulk image metadata editing. It corrects EXIF timestamps, preserves sequential time shifts, and extracts dates from filenames automatically.",
-    image: "project-logo/metadata-editor.png",
-    link: "https://github.com/nehulbeans/metadata-editor",
-    icon: projectIconNames.image,
-    type: "CLI / Go",
+      "A concurrent, sharded in-memory metrics aggregation service built with Go, PostgreSQL, and Go kit. It ingests high-volume events, routes them using hash-based shard keys, aggregates counters and unique users with lock-protected shards, and periodically flushes batched results to PostgreSQL using transactions.",
+    image: "/project-logo/shardmetrics.png",
+    link: "https://github.com/nehulbeans/inMemoryAggregation",
+    icon: projectIconNames.metrics,
+    type: "Backend / Go",
     accent: "coral",
-    cta: "inspect the metadata",
+    cta: "explore the aggregator",
   },
   {
     title: "F1nalyze",
@@ -66,6 +68,28 @@ export const projects = [
     type: "ML / Python",
     accent: "chartreuse",
     cta: "predict the podium",
+  },
+  {
+    title: "Realtime Voice Agent",
+    description:
+      "A real-time conversational voice AI agent built with LiveKit, Deepgram, Groq, and Cartesia. It handles speech-to-text, LLM responses, text-to-speech, interruption handling, and voice activity detection, while collecting latency and usage metrics for performance analysis.",
+    image: "/project-logo/voice-agent.png",
+    link: "https://github.com/nehulbeans/voice-agent",
+    icon: projectIconNames.voice,
+    type: "AI / Realtime",
+    accent: "chartreuse",
+    cta: "talk to the agent",
+  },
+  {
+    title: "Image Metadata Editor",
+    description:
+      "A Go-based CLI tool for bulk image metadata editing. It corrects EXIF timestamps, preserves sequential time shifts, and extracts dates from filenames automatically.",
+    image: "project-logo/metadata-editor.png",
+    link: "https://github.com/nehulbeans/metadata-editor",
+    icon: projectIconNames.image,
+    type: "CLI / Go",
+    accent: "coral",
+    cta: "inspect the metadata",
   },
   {
     title: "Adv. Library Management System",
@@ -244,4 +268,4 @@ export const instaPosts = [
 ];
 
 export const resumeUrl =
-  "https://drive.google.com/file/d/1rrzme4-vf3LBWF5Zsn_y0MjzTEWMg3-b/preview";
+  "https://drive.google.com/file/d/1SVRKQ7faTpssqUtPPuctbtkNpoJeEeV9/preview";
