@@ -7,5 +7,26 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "vars": {
+    "FABLE_API_URL": "https://api.fable.co/api/v2/users/297c48c4-02c2-48c1-b508-31478c6406be/book_lists/0dad4aae-4f38-4d47-aa0a-a3db5bf30cbe/books?limit=3",
+    "LASTFM_USERNAME": "nehuljainn",
+    "LETTERBOXD_RSS_URL": "https://letterboxd.com/seasonsofnehul/rss/"
+  },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true
+    },
+    "issue_detection": {
+      "enabled": true
+    }
+  },
 }
