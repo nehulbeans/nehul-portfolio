@@ -1,6 +1,5 @@
 import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 function getFirstName(fullName) {
   if (!fullName) return "Someone";
@@ -126,52 +125,136 @@ function buildEmailText({ firstName, fullName, email, subject, message }) {
 
 export async function POST(request) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { env } = getCloudflareContext();
+    const apiKey = env.RESEND_API_KEY;
 
-    if (!name || !email || !message) {
+    if (!apiKey) {
+      console.error("Contact API: RESEND_API_KEY is not configured.");
+
       return Response.json(
-        { error: "Name, email and message are required." },
+        {
+          error:
+            "The contact form is temporarily unavailable. Please try again later.",
+        },
+        { status: 503 }
+      );
+    }
+
+    // Initialize only when a request arrives, not during next build.
+    const resend = new Resend(apiKey);
+
+    let body;
+
+    try {
+      body = await request.json();
+    } catch {
+      return Response.json(
+        { error: "Invalid request body." },
         { status: 400 }
       );
     }
 
-    const firstName = sanitizeForEmail(getFirstName(name));
-    const trimmedSubject = subject ? subject.trim().slice(0, 120) : "";
+    if (
+      !body ||
+      typeof body !== "object" ||
+      Array.isArray(body)
+    ) {
+      return Response.json(
+        { error: "Invalid request body." },
+        { status: 400 }
+      );
+    }
+
+    const { name, email, subject, message } = body;
+
+    if (
+      typeof name !== "string" ||
+      typeof email !== "string" ||
+      typeof message !== "string" ||
+      (subject != null && typeof subject !== "string")
+    ) {
+      return Response.json(
+        { error: "Please provide a valid name, email, and message." },
+        { status: 400 }
+      );
+    }
+
+    const fullName = name.trim();
+    const visitorEmail = email.trim();
+    const trimmedMessage = message.trim();
+    const trimmedSubject = (subject ?? "").trim();
+
+    if (!fullName || !visitorEmail || !trimmedMessage) {
+      return Response.json(
+        { error: "Name, email, and message are required." },
+        { status: 400 }
+      );
+    }
+
+    if (
+      fullName.length > 100 ||
+      visitorEmail.length > 254 ||
+      trimmedSubject.length > 120 ||
+      trimmedMessage.length > 10000
+    ) {
+      return Response.json(
+        {
+          error:
+            "Please keep your name under 100 characters, subject under 120, and message under 10,000.",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (
+      /[\r\n]/.test(fullName) ||
+      /[\r\n]/.test(visitorEmail) ||
+      /[\r\n]/.test(trimmedSubject) ||
+      !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(visitorEmail)
+    ) {
+      return Response.json(
+        { error: "Please provide a valid name, email, and subject." },
+        { status: 400 }
+      );
+    }
+
+    const firstName = sanitizeForEmail(getFirstName(fullName));
+
+    const emailContent = {
+      firstName,
+      fullName,
+      email: visitorEmail,
+      subject: trimmedSubject,
+      message: trimmedMessage,
+    };
 
     const { data, error } = await resend.emails.send({
       from: `${firstName} via nehuls.space <hello@nehuls.space>`,
       to: ["work.nehul@gmail.com"],
-      replyTo: email,
+      replyTo: visitorEmail,
       subject: trimmedSubject
         ? `${firstName}: ${trimmedSubject}`
         : `New message from ${firstName}`,
-      html: buildEmailHtml({
-        firstName,
-        fullName: name,
-        email,
-        subject: trimmedSubject,
-        message,
-      }),
-      text: buildEmailText({
-        firstName,
-        fullName: name,
-        email,
-        subject: trimmedSubject,
-        message,
-      }),
+      html: buildEmailHtml(emailContent),
+      text: buildEmailText(emailContent),
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend send failed:", error);
+
       return Response.json(
         { error: "Could not send your message. Please try again." },
-        { status: 500 }
+        { status: 502 }
       );
     }
 
-    return Response.json({ success: true, id: data.id });
-  } catch (err) {
-    console.error("Contact API error:", err);
+    return Response.json({
+      success: true,
+      id: data?.id,
+    });
+  } catch (error) {
+    console.error("Contact API error:", error);
+
     return Response.json(
       { error: "Something went wrong. Please try again." },
       { status: 500 }
