@@ -195,9 +195,6 @@ export default function ThingsPage() {
             transition={{ duration: 0.3 }}
             className="mt-12 flex flex-col items-center gap-3 text-center"
           >
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              chip in? :p
-            </p>
             <a
               href={BUY_ME_A_COFFEE_URL}
               target="_blank"
@@ -205,7 +202,7 @@ export default function ThingsPage() {
               className="inline-flex items-center gap-2 rounded-full bg-coral-500 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-coral-600"
             >
               <Coffee size={16} strokeWidth={1.8} />
-              buy me a coffee
+              chip in? :p
             </a>
           </motion.div>
         )}
