@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import { Send, LoaderCircle, AlertCircle } from 'lucide-react';
 
 export default function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function ContactSection() {
         if (formRef.current) {
           formRef.current.reset();
         }
-      }, 5000);
+      }, 6000);
     }
 
     return () => {
@@ -29,19 +30,38 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     setIsLoading(true);
 
     try {
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
+      const formData = new FormData(formRef.current);
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          subject: formData.get('subject') || '',
+          message: formData.get('message'),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Could not send your message.');
+      }
 
       setIsSubmitted(true);
-    } catch (error) {
-      console.error('Failed to send email:', error);
+    } catch (err) {
+      console.error('Failed to send email:', err);
+      setError(
+        err?.message ||
+          'Something went wrong. Please try again or email me directly.'
+      );
     } finally {
       setIsLoading(false);
     }
@@ -64,24 +84,32 @@ export default function ContactSection() {
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm text-gray-500 dark:text-zinc-500">
+                  <label
+                    htmlFor="contact-name"
+                    className="text-sm text-gray-500 dark:text-zinc-500"
+                  >
                     Name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
-                    name="user_name"
+                    name="name"
                     required
                     placeholder="Your Name"
                     className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
-                  <label className="text-sm text-gray-500 dark:text-zinc-500">
+                  <label
+                    htmlFor="contact-email"
+                    className="text-sm text-gray-500 dark:text-zinc-500"
+                  >
                     Email
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
-                    name="user_email"
+                    name="email"
                     required
                     placeholder="Your Email"
                     className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
@@ -89,10 +117,29 @@ export default function ContactSection() {
                 </div>
               </div>
               <div>
-                <label className="text-sm text-gray-500 dark:text-zinc-500">
+                <label
+                  htmlFor="contact-subject"
+                  className="text-sm text-gray-500 dark:text-zinc-500"
+                >
+                  Subject <span className="text-zinc-400">(optional)</span>
+                </label>
+                <input
+                  id="contact-subject"
+                  type="text"
+                  name="subject"
+                  placeholder="What's this about?"
+                  className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="contact-message"
+                  className="text-sm text-gray-500 dark:text-zinc-500"
+                >
                   Message
                 </label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   required
                   placeholder="Your Message"
@@ -100,18 +147,29 @@ export default function ContactSection() {
                   className="w-full bg-white dark:bg-form-bg rounded-lg px-4 py-2 mt-1 placeholder-gray-400 dark:placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-coral-500 border border-gray-300 dark:border-none text-gray-900 dark:text-white"
                 />
               </div>
+
+              {error && (
+                <div className="flex items-start gap-2 rounded-lg bg-coral-500/10 px-4 py-3 text-sm text-coral-600 dark:text-coral-400">
+                  <AlertCircle size={16} className="mt-0.5 shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
+
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-coral-500 hover:bg-coral-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-coral-500 hover:bg-coral-600 text-white py-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <>
+                    <LoaderCircle size={18} className="animate-spin" />
                     <span>Sending...</span>
-                  </div>
+                  </>
                 ) : (
-                  'Submit'
+                  <>
+                    <Send size={18} />
+                    <span>Submit</span>
+                  </>
                 )}
               </button>
             </form>
